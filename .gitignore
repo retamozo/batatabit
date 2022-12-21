@@ -1,0 +1,41 @@
+# Created by https://www.toptal.com/developers/gitignore/api/web,yarn,git
+# Edit at https://www.toptal.com/developers/gitignore?templates=web,yarn,git
+
+### Git ###
+# Created by git for backups. To disable backups in Git:
+# $ git config --global mergetool.keepBackup false
+*.orig
+
+# Created by git when using merge tools for conflicts
+*.BACKUP.*
+*.BASE.*
+*.LOCAL.*
+*.REMOTE.*
+*_BACKUP_*.txt
+*_BASE_*.txt
+*_LOCAL_*.txt
+*_REMOTE_*.txt
+
+node_modules
+
+### yarn ###
+# https://yarnpkg.com/getting-started/qa#which-files-should-be-gitignored
+
+.yarn/*
+!.yarn/releases
+!.yarn/patches
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+
+# if you are NOT using Zero-installs, then:
+# comment the following lines
+!.yarn/cache
+yarn.lock
+package-lock.json
+
+# and uncomment the following lines
+# .pnp.*
+.parcel-cache
+dist
+.env*
