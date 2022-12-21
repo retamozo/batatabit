@@ -2,7 +2,7 @@
   "source": "src/index.html",
   "scripts": {
     "dev": "parcel src/index.html",
-    "build": "parcel build dist"
+    "build": "parcel build src/index.html"
   },
   "devDependencies": {
     "@parcel/transformer-typescript-tsc": "^2.8.2",
