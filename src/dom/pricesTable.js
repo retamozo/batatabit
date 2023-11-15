@@ -1,10 +1,10 @@
-import { EXAMPLE_MARKET } from '../services/const';
 
 const TABLE = document.getElementById('assets-table');
 const LAST_UPDATE = document.getElementById('last-update-box');
 
 const lastUpdate = () => {
     const now = new Date();
+    now.setMinutes(now.getMinutes() - 15 )
     const [, dateString] = now
         .toLocaleDateString(`es-ES`, { weekday: 'long', month: 'short', day: 'numeric' })
         .split(',');
@@ -33,8 +33,9 @@ const buildTable = (rows) => {
     `;
 };
 
-export const drawPriceTable = (prices = EXAMPLE_MARKET) => {
+export const drawPriceTable = (prices) => {
     if (prices) {
+        console.log('pricew', prices);
         const rows = prices.map((asset, i) => buildRow(asset, i, prices.length)).join('');
         buildTable(rows);
         lastUpdate();

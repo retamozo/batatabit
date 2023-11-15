@@ -1,19 +1,18 @@
 const SECTION = document.getElementById('benefit-cards-container');
 
-export async function drawBenefitsSection(data: Benefit[]) {
+export function drawBenefitsSection(data) {
     if (data) {
         drawSection(data);
     }
 }
 
-const drawSection = (data: Benefit[]) => {
-    console.log('data', data);
+const drawSection = (data) => {
     SECTION.innerHTML = `
              ${data.map((card) => getBenefitCard(card)).join('')}
      `;
 };
 
-const getBenefitCard = ({ body, iconPath, title }: Benefit) => {
+const getBenefitCard = ({ body, iconPath, title }) => {
     const card = `
     <article class="benefit-card--container">
         <img src="${iconPath}" alt="${title}"/>

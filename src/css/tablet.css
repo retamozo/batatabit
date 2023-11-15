@@ -1,6 +1,6 @@
 html {
   font-size: 100%;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -10,7 +10,7 @@ header .assets-table {
   margin: 0 auto;
 }
 
-.header__title-container .header__button {
+.header__title .header__button {
   width: 330px;
 }
 
